@@ -23,5 +23,7 @@ namespace TaskNumberTwo.Models
         [Required]
         [ForeignKey(nameof(HouseId))]
         public House House { get; set; }
+
+        public List<Person> Persons { get; set; } = new List<Person>();
     }
 }

@@ -31,5 +31,7 @@ namespace TaskNumberTwo.Models
         [Required]
         [ForeignKey(nameof(FlatId))]
         public Flat Flat { get; set; }
+
+        public List<Flat> Flats { get; set; } = new List<Flat>();
     }
 }

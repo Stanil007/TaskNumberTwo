@@ -18,5 +18,7 @@ namespace TaskNumberTwo.Models
 
         [Required]
         public string PostCode { get; set; }
+
+        public List<Flat> Flats { get; set; } = new List<Flat>();
     }
 }

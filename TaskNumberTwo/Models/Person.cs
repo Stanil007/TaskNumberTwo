@@ -12,9 +12,10 @@ namespace TaskNumberTwo.Models
         public string FirstName { get; set; }
 
         [Required]
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
 
-        public int PersonalCode { get; set; }
+        [Required]
+        public string PersonalCode { get; set; }
 
         [Required]
         public string DateOfBirth { get; set; }

@@ -1,14 +1,14 @@
-﻿using TaskNumberTwo.Models;
+﻿using TaskNumberTwo.DTOs;
 
 namespace TaskNumberTwo.Contracts
 {
     public interface IHouseService
     {
-        Task<IEnumerable<House>> GetAllHousesAsync();
+        Task<IEnumerable<HouseDto>> GetAllHousesAsync();
 
-        Task<House> CreateHouseAsync();
+        Task<int> CreateHouseAsync(HouseDto model);
 
-        Task<House> UpdateHouseAsync();
+        Task UpdateHouseAsync(int id, HouseDto model);
         Task DeleteHouseAsync(int id);
     }
 }

@@ -1,15 +1,17 @@
-﻿using TaskNumberTwo.Models;
+﻿using TaskNumberTwo.DTOs;
 
 namespace TaskNumberTwo.Contracts
 {
     public interface IPersonService
     {
-       Task<IEnumerable<Person>> GetAllPersonsAsync();
+       Task<IEnumerable<PersonDto>> GetAllPersonsAsync();
 
-        Task<Person> CreatePersonAsync();
+        Task<int> CreatePersonAsync(PersonDto model, int flatid);
 
-        Task<Person> UpdatePersonAsync();
+        Task UpdatePersonAsync(int id, PersonDto model);
 
         Task DeletePersonAsync(int id);
+
+
     }
 }

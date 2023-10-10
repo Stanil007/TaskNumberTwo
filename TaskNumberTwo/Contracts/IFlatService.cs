@@ -1,14 +1,14 @@
-﻿using TaskNumberTwo.Models;
+﻿using TaskNumberTwo.DTOs;
 
 namespace TaskNumberTwo.Contracts
 {
     public interface IFlatService
     {
-        Task<IEnumerable<Flat>> GetAllFlatsAsync();
+        Task<IEnumerable<FlatDto>> GetAllFlatsAsync();
 
-        Task<Flat> CreateFlatAsync();
+        Task<int> CreateFlatAsync(FlatDto model, int houseid);
 
-        Task<Flat> UpdateFlatAsync();
+        Task UpdateFlatAsync(int id, FlatDto model);
         Task DeleteFlatAsync(int id);
     }
 }

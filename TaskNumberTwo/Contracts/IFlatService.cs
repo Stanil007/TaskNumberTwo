@@ -10,5 +10,6 @@ namespace TaskNumberTwo.Contracts
 
         Task UpdateFlatAsync(int id, FlatDto model);
         Task DeleteFlatAsync(int id);
+
     }
 }
